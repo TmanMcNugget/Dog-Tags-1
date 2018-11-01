@@ -37,13 +37,32 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9tY-FJ-3OY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fuL-ka-DsI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fuL-ka-DsI">
+                            <connections>
+                                <segue destination="1SX-FO-xuP" kind="show" id="HKJ-Lw-Uc6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="TlI-yp-woh"/>
             </objects>
             <point key="canvasLocation" x="860" y="133.5832083958021"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="Z1x-IC-eUx">
+            <objects>
+                <viewController id="1SX-FO-xuP" customClass="AddViewController" customModule="Dog_Tags__1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9jG-ri-4X5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ajI-GX-alg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkf-Cc-GP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1mk-lz-ARq">
