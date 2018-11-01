@@ -12,6 +12,7 @@
 		2EC0A10D2189F763002B3EAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC0A10B2189F763002B3EAC /* Main.storyboard */; };
 		2EC0A10F2189F764002B3EAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EC0A10E2189F764002B3EAC /* Assets.xcassets */; };
 		2EC0A1122189F764002B3EAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC0A1102189F764002B3EAC /* LaunchScreen.storyboard */; };
+		2EF4354E218B459800CCC6D7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4354D218B459800CCC6D7 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2EC0A10E2189F764002B3EAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EC0A1112189F764002B3EAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2EC0A1132189F764002B3EAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EF4354D218B459800CCC6D7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				2EC0A1072189F763002B3EAC /* AppDelegate.swift */,
 				2EC0A1092189F763002B3EAC /* ViewController.swift */,
 				2EC0A10B2189F763002B3EAC /* Main.storyboard */,
+				2EF4354D218B459800CCC6D7 /* AddViewController.swift */,
 				2EC0A10E2189F764002B3EAC /* Assets.xcassets */,
 				2EC0A1102189F764002B3EAC /* LaunchScreen.storyboard */,
 				2EC0A1132189F764002B3EAC /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				2EC0A10A2189F763002B3EAC /* ViewController.swift in Sources */,
 				2EC0A1082189F763002B3EAC /* AppDelegate.swift in Sources */,
+				2EF4354E218B459800CCC6D7 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
