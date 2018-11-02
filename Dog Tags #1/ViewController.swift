@@ -21,6 +21,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        return
+    }
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation])
     {
@@ -28,6 +31,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegionMake(center, span)
         self.mapView.setRegion(region, animated: true)
+    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
+    {
+        if status == .authorizedWhenInUse
+        {
+            locationManager.startUpdatingLocation()
+            locationManager.requestLocation()
+        }
     }
 
 }
