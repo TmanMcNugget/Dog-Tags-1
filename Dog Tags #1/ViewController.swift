@@ -8,14 +8,18 @@
 
 import UIKit
 import MapKit
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var center = (CLLocationCoordinate2D.init(latitude: 38.89731, longitude: -77.00626))
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.requestLocation()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation])
