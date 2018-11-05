@@ -9,7 +9,13 @@
 import UIKit
 import AVFoundation
 
-class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVCaptureMetadataOutputObjectsDelegate{
+    
+    var captureSession:AVCaptureSession?
+    var videoPreviewLayer:AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView:UIView?
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
