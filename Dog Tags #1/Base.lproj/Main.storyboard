@@ -80,6 +80,21 @@
             </objects>
             <point key="canvasLocation" x="1729" y="133"/>
         </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="mjB-JH-hJd">
+            <objects>
+                <viewController id="Fo5-eG-jrA" customClass="ScannerViewController" customModule="Dog_Tags__1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqK-Zi-5Xh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C3x-gf-IxB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SUp-bq-W3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549" y="133"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1mk-lz-ARq">
             <objects>

@@ -10,5 +10,5 @@ import UIKit
 
 class Default_Input_Info: NSObject
 {
-    var defaultInfo = [""]
+    var defaultInfo: String = ""
 }

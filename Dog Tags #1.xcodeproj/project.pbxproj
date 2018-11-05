@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E34BACE2190986A00B6D627 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E34BACD2190986A00B6D627 /* ScannerViewController.swift */; };
 		2EC0A1082189F763002B3EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0A1072189F763002B3EAC /* AppDelegate.swift */; };
 		2EC0A10A2189F763002B3EAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0A1092189F763002B3EAC /* ViewController.swift */; };
 		2EC0A10D2189F763002B3EAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EC0A10B2189F763002B3EAC /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E34BACD2190986A00B6D627 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		2EC0A1042189F763002B3EAC /* Dog Tags #1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dog Tags #1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC0A1072189F763002B3EAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EC0A1092189F763002B3EAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				2EC0A1072189F763002B3EAC /* AppDelegate.swift */,
 				2EC0A1092189F763002B3EAC /* ViewController.swift */,
 				2EC0A10B2189F763002B3EAC /* Main.storyboard */,
+				2E34BACD2190986A00B6D627 /* ScannerViewController.swift */,
 				2EF4354F218B47E500CCC6D7 /* Default_Input_Info.swift */,
 				2EF4354D218B459800CCC6D7 /* AddViewController.swift */,
 				2EC0A10E2189F764002B3EAC /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				2EC0A10A2189F763002B3EAC /* ViewController.swift in Sources */,
 				2EC0A1082189F763002B3EAC /* AppDelegate.swift in Sources */,
 				2EF43550218B47E500CCC6D7 /* Default_Input_Info.swift in Sources */,
+				2E34BACE2190986A00B6D627 /* ScannerViewController.swift in Sources */,
 				2EF4354E218B459800CCC6D7 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
