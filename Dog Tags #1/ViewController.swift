@@ -12,7 +12,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    var center = (CLLocationCoordinate2D.init(latitude: 38.89731, longitude: -77.00626))
+    var center = MKUserLocation()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -29,8 +29,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     {
         let myLocation = locations.first!
         let span = MKCoordinateSpanMake(0.01, 0.01)
-        let region = MKCoordinateRegionMake(center, span)
-        self.mapView.setRegion(region, animated: true)
+        let userArea = center.coordinate
+        self.mapView.setCenter(userArea, animated: true)
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
     {
