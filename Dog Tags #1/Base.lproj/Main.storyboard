@@ -79,7 +79,6 @@
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="8sp-3T-XLm"/>
                                     <barButtonItem systemItem="add" id="m3V-M3-4dZ">
                                         <connections>
                                             <segue destination="Fo5-eG-jrA" kind="show" id="g9F-5n-ywJ"/>
