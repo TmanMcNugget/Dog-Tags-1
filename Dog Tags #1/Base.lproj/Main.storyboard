@@ -37,9 +37,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="9tY-FJ-3OY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fuL-ka-DsI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vcu-Zh-n7y">
                             <connections>
-                                <segue destination="1SX-FO-xuP" kind="show" id="8OA-Kl-MOv"/>
+                                <segue destination="1SX-FO-xuP" kind="show" id="dqa-Z9-i8V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -75,6 +75,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJa-QW-lw4">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" id="8sp-3T-XLm"/>
+                                    <barButtonItem systemItem="add" id="m3V-M3-4dZ">
+                                        <connections>
+                                            <segue destination="Fo5-eG-jrA" kind="show" id="g9F-5n-ywJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="A5p-ak-eN1"/>

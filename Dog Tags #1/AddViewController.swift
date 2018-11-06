@@ -14,8 +14,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,7 +23,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
     }
     
 }
