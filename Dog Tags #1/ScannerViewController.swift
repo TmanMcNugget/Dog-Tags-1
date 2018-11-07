@@ -17,6 +17,27 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
+    var deviceDiscoverySession
+    
+    let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
+    
+    let captureDevice = deviceDiscoverySession.devices.first; else {
+    print("Failed to get the camera device")
+    return
+    }
+    
+    do {
+    let captureMetadataOutput = AVCaptureMetadataOutput()
+    captureSession.addOutput(captureMetadataOutput)
+    let input = try AVCaptureDeviceInput(device: captureDevice)
+    
+    captureSession.addInput(input)
+    
+    } catch {
+   
+    print(error)
+    return
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
