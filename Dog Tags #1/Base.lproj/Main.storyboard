@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-Cz-om9">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-Cz-om9">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -91,7 +91,6 @@
                         <viewLayoutGuide key="safeArea" id="A5p-ak-eN1"/>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkf-Cc-GP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

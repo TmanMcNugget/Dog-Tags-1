@@ -10,5 +10,13 @@ import UIKit
 
 class Default_Input_Info: NSObject
 {
-    var defaultInfo: String = ""
+    class defaultedInfo
+    {
+        var name = ""
+        var breed = ""
+        var age = ""
+        var extra = ""
+        var aproxHeight = Int()
+        var aproxWeight = Int()
+    }
 }

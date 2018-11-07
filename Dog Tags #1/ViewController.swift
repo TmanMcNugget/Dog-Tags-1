@@ -13,6 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var center = MKUserLocation()
+    var stops = [[String: Any]]()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -22,7 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
         locationManager.startUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        return
+        return 
     }
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation])
