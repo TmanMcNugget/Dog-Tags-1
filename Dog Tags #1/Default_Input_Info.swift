@@ -13,10 +13,11 @@ class Default_Input_Info: NSObject
     class defaultedInfo
     {
         var name = ""
-        var breed = ""
+        var breedOrTypeOfAnimal = ""
         var age = ""
         var extra = ""
         var aproxHeight = Int()
         var aproxWeight = Int()
+        var animal = ""
     }
 }
