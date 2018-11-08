@@ -17,7 +17,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    var deviceDiscoverySession
+    var deviceDiscoverySession:Int = 0
     
     let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
     
@@ -34,7 +34,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     captureSession.addInput(input)
     
     } catch {
-   
+    
     print(error)
     return
     }
@@ -43,4 +43,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewDidLoad()
 
      }
+  
+
+
 }
