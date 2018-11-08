@@ -17,11 +17,12 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    var deviceDiscoverySession:Int = 0
-    
+    var deviceDiscoverySession:Int = 0    
     let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
     
-    let captureDevice = deviceDiscoverySession.devices.first; else {
+    let captureDevice = deviceDiscoverySession.devices.first
+    else
+    {
     print("Failed to get the camera device")
     return
     }
