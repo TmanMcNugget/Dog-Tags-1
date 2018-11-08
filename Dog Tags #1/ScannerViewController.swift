@@ -21,7 +21,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
     
-    let captureDevice = deviceDiscoverySession.devices.first; else {
+    let captureDevice = deviceDiscoverySession.devices.first;
+    if
+    else
+    
+    {
     print("Failed to get the camera device")
     return
     }
@@ -43,7 +47,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewDidLoad()
 
      }
-  
 
 
 }
