@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
