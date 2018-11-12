@@ -14,7 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     let locationManager = CLLocationManager()
     //var center = MKUserLocation()
     var center = (CLLocationCoordinate2D.init(latitude: 38.89731, longitude: -77.00626))
-
+    let geocoder = CLGeocoder()
     var stops = [[String: Any]]()
     override func viewDidLoad() {
         super.viewDidLoad()
