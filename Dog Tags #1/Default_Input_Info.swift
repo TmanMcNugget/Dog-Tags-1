@@ -19,5 +19,6 @@ class Default_Input_Info: NSObject
         var aproxHeight = Int()
         var aproxWeight = Int()
         var animal = ""
+        var picture = UIImage()
     }
 }
