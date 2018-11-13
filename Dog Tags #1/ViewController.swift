@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -19,6 +20,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     var auto: Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
+
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
@@ -32,33 +34,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation])
     {
-        //let myLocation = locations.first!
+        self.locationManager.stopUpdatingLocation()
+        let myLocation = locations.first!
         //let span = MKCoordinateSpanMake(0.01, 0.01)
         let span = MKCoordinateSpanMake(0.01, 0.01)
-        let region = MKCoordinateRegionMake(center, span)
+        let region = MKCoordinateRegionMake(self.toCLLocation2D(myLocation), span)
         //self.mapView.setRegion(region, animated: true)
         //let userArea = center.coordinate
         self.mapView.setRegion(region, animated: true)
     }
-    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
-        if gesture {
-            self.auto = false
-            print("map view moved, self.auto set to \(self.auto)")
-        }
-        if self.auto {
-            print("self.auto is true, back to auto-camera-tron")
-            
-            self.camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15)
-        }
-    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
     {
         if status == .authorizedWhenInUse
         {
+            locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
             locationManager.requestLocation()
         }
     }
 
+    func toCLLocation2D(_ location: CLLocation) -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    }
 }
 
