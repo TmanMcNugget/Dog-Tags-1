@@ -16,6 +16,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
     var center = (CLLocationCoordinate2D.init(latitude: 38.89731, longitude: -77.00626))
     let geocoder = CLGeocoder()
     var stops = [[String: Any]]()
+    var auto: Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -38,6 +39,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
         //self.mapView.setRegion(region, animated: true)
         //let userArea = center.coordinate
         self.mapView.setRegion(region, animated: true)
+    }
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        if gesture {
+            self.auto = false
+            print("map view moved, self.auto set to \(self.auto)")
+        }
+        if self.auto {
+            print("self.auto is true, back to auto-camera-tron")
+            
+            self.camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15)
+        }
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
     {
