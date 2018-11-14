@@ -28,6 +28,11 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
         
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let name = Default_Input_Info.defaultedInfo.init().name
+        let age = Default_Input_Info.defaultedInfo.init().name
+        
+    }
 }
                                                     
