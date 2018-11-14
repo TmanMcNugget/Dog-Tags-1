@@ -22,6 +22,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         return cell
+        
     }
     
 }

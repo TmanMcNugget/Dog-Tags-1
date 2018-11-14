@@ -27,6 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate,  MKMapViewDel
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         return 
