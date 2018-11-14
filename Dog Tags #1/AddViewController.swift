@@ -10,8 +10,9 @@ import UIKit
 import AVFoundation
 
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    override func viewDidLoad() {
+    var pet = [[String: String]]()
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -21,6 +22,9 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let indexPath = pet[indexPath.row]
+        cell.textLabel?.text = indexPath["id"]
+        cell.detailTextLabel?.text = indexPath["description"]
         return cell
         
     }
