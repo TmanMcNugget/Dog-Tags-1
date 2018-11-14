@@ -9,12 +9,10 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
-    @IBOutlet var infoController: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+    
 
        
 
