@@ -31,6 +31,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let name = Default_Input_Info.defaultedInfo.init().name
+        let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
         let age = Default_Input_Info.defaultedInfo.init().name
         let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
         let height = Default_Input_Info.defaultedInfo.init().aproxHeight
