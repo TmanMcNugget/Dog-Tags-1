@@ -165,7 +165,14 @@
                         <viewLayoutGuide key="safeArea" id="Fcn-nE-JWx"/>
                     </view>
                     <connections>
-                        <outlet property="infoController" destination="III-6c-dAe" id="Cho-it-8bM"/>
+                        <outlet property="ageTextField" destination="xGP-nS-gN2" id="APW-gb-m4e"/>
+                        <outlet property="animalTextField" destination="wga-Zd-zX6" id="3Ka-9k-TOj"/>
+                        <outlet property="extraTextView" destination="3wj-3o-co4" id="ti3-FN-Cbh"/>
+                        <outlet property="heightTextField" destination="dn7-lc-1uu" id="S1x-mt-KU5"/>
+                        <outlet property="nameTextField" destination="ns1-53-fb1" id="Vkj-NW-BaY"/>
+                        <outlet property="petImage" destination="dym-Yp-ea8" id="hvx-RW-uiC"/>
+                        <outlet property="typeTextField" destination="XLa-QI-NYy" id="p4Z-Qg-l07"/>
+                        <outlet property="weightTextField" destination="jqA-ws-uG8" id="u9Q-c8-d13"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1J-5Z-zdn" userLabel="First Responder" sceneMemberID="firstResponder"/>

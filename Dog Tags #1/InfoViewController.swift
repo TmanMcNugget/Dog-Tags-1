@@ -10,6 +10,14 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var animalTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var extraTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
     
