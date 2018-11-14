@@ -164,10 +164,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fcn-nE-JWx"/>
                     </view>
+                    <connections>
+                        <outlet property="infoController" destination="III-6c-dAe" id="Cho-it-8bM"/>
+                        <outlet property="infoViewController" destination="III-6c-dAe" id="vcK-1f-DCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1J-5Z-zdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728.985507246377" y="839.67391304347836"/>
+            <point key="canvasLocation" x="1709" y="839"/>
         </scene>
         <!--Scanner View Controller-->
         <scene sceneID="mjB-JH-hJd">

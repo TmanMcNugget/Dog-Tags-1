@@ -10,6 +10,7 @@ import UIKit
 
 class Default_Input_Info: NSObject
 {
+    
     class defaultedInfo
     {
         var name = ""
@@ -21,4 +22,8 @@ class Default_Input_Info: NSObject
         var animal = ""
         var picture = UIImage()
     }
+
+
+
+
 }
