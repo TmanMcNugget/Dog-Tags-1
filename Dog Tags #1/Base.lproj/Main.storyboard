@@ -73,7 +73,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="h8X-Wm-2hM" kind="show" id="Jtw-P1-cLa"/>
+                                            <segue destination="h8X-Wm-2hM" kind="show" id="vaM-9t-T3p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -166,7 +166,6 @@
                     </view>
                     <connections>
                         <outlet property="infoController" destination="III-6c-dAe" id="Cho-it-8bM"/>
-                        <outlet property="infoViewController" destination="III-6c-dAe" id="vcK-1f-DCW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1J-5Z-zdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
