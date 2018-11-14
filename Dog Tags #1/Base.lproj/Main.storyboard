@@ -164,6 +164,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fcn-nE-JWx"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="xGP-nS-gN2" id="Zbp-B7-3fr"/>
+                        <outlet property="animalTextField" destination="wga-Zd-zX6" id="1ew-vp-Kpl"/>
+                        <outlet property="extraTextView" destination="3wj-3o-co4" id="ovj-xX-8P5"/>
+                        <outlet property="heightTextField" destination="dn7-lc-1uu" id="avz-9L-OE2"/>
+                        <outlet property="nameTextField" destination="ns1-53-fb1" id="AjK-5n-bBL"/>
+                        <outlet property="petImage" destination="dym-Yp-ea8" id="QW6-OO-BMd"/>
+                        <outlet property="typeTextField" destination="XLa-QI-NYy" id="XpI-dd-zzA"/>
+                        <outlet property="weightTextField" destination="jqA-ws-uG8" id="oyT-1J-w1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1J-5Z-zdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
