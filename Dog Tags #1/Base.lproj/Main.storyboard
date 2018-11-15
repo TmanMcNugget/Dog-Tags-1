@@ -98,9 +98,14 @@
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="add" id="m3V-M3-4dZ">
+                                    <barButtonItem title="Scan" id="m3V-M3-4dZ">
                                         <connections>
                                             <segue destination="Fo5-eG-jrA" kind="show" id="g9F-5n-ywJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="add" id="JIL-at-V1H">
+                                        <connections>
+                                            <action selector="addItem:" destination="1SX-FO-xuP" id="TyY-qZ-NqP"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>

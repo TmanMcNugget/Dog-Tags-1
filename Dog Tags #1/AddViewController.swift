@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var pet = [[String: String]]()
     override func viewDidLoad()
@@ -26,7 +25,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textLabel?.text = indexPath["id"]
         cell.detailTextLabel?.text = indexPath["description"]
         return cell
-        
+    }
+    @IBAction func addItem(_ sender: UIBarButtonItem) {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -38,8 +38,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let weight = Default_Input_Info.defaultedInfo.init().aproxWeight
         let picture = Default_Input_Info.defaultedInfo.init().picture
         let extra = Default_Input_Info.defaultedInfo.init().extra
-        let animal = Default_Input_Info.defaultedInfo.init().animal
-        
+        let animal = Default_Input_Info.defaultedInfo.init().animal        
     }
 }
                                                     
