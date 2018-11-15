@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var pet = [[String: String]]()
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,7 +27,26 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.detailTextLabel?.text = indexPath["description"]
         return cell
     }
-    @IBAction func addItem(_ sender: UIBarButtonItem) {
+    @IBAction func addItem(_ sender: UIBarButtonItem)
+    {
+        alert()
+    }
+    func alert()
+    {
+        let alert = UIAlertController(title: "Add Item", message: "Do you want to add something?", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "New Item"
+        })
+        let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
+            let choiceTextField = alert.textFields![0] as UITextField
+            let allItem = choiceTextField.text!
+            self.pet.append(allItem)
+            self.tableView.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: false, completion: nil)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {

@@ -115,6 +115,9 @@
                         <viewLayoutGuide key="safeArea" id="A5p-ak-eN1"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="tableView" destination="Qv4-qg-5Dh" id="s5I-Eh-e1c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkf-Cc-GP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
