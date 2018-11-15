@@ -10,7 +10,14 @@ import UIKit
 import AVFoundation
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var pet = [[String: String]]()
+    {
+        didSet{
+            defaults.set(pet, forKey: item)
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
+    var defaults = UserDefaults.standard
+    var item = String()
     override func viewDidLoad()
     {
         super.viewDidLoad()
