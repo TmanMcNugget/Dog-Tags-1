@@ -34,6 +34,11 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
         let age = Default_Input_Info.defaultedInfo.init().name
         let extra = Default_Input_Info.defaultedInfo.init().extra
+        let aproxHeight = Default_Input_Info.defaultedInfo.init().aproxHeight
+        let aproxWeight = Default_Input_Info.defaultedInfo.init().aproxWeight
+        let animal = Default_Input_Info.defaultedInfo.init().animal
+        let picture = Default_Input_Info.defaultedInfo.init().picture
+        
         
         
         
