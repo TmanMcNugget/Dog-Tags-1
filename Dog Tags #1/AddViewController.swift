@@ -49,7 +49,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let allItem = choiceTextField.text!
             self.pet.append(allItem)
             self.tableView.reloadData()
-         
+        }
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
@@ -64,7 +64,10 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let extra = Default_Input_Info.defaultedInfo.init().extra
         let animal = Default_Input_Info.defaultedInfo.init().animal        
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! ViewController
+    }
 }
                                                     
 
-}
+
