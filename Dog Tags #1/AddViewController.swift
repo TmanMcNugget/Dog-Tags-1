@@ -47,7 +47,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
             let choiceTextField = alert.textFields![0] as UITextField
             let allItem = choiceTextField.text!
-            self.pet.append(allItem)
+            self.item.append(allItem)
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
