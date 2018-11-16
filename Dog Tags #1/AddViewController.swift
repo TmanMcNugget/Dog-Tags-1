@@ -24,7 +24,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return item.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -54,6 +54,15 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: false, completion: nil)
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            self.item.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.reloadData()
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
