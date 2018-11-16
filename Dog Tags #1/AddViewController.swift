@@ -49,11 +49,11 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let allItem = choiceTextField.text!
             self.pet.append(allItem)
             self.tableView.reloadData()
-        }
+         
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
-        present(alert, animated: false, completion: nil)
+        self.present(alert, animated: false, completion: nil)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -66,3 +66,5 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
 }
                                                     
+
+}
