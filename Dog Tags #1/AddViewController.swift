@@ -59,7 +59,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     {
         if editingStyle == .delete
         {
-            self.item.remove(at: indexPath.row)
+            self.pet.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
         }
