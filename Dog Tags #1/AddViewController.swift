@@ -64,6 +64,13 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             tableView.reloadData()
         }
     }
+    func indexPoints()
+    {
+        for i in 0...3
+        {
+    
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let name = Default_Input_Info.defaultedInfo.init().name
