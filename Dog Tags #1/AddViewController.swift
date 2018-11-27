@@ -18,6 +18,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     var defaults = UserDefaults.standard
     var item = String()
+    var createdItems = [0, 1, 2, 3]
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -54,6 +55,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: false, completion: nil)
+        self.tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
@@ -64,26 +66,25 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             tableView.reloadData()
         }
     }
-    func indexPoints()
+//    override func viewWillAppear(_ animated: Bool) {
+//        if let saveData = defaults.object(forKey: item) as? []
+//        {
+//            pet = saveData
+//        }
+//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         for i in 0...3
         {
-    
+            let name = Default_Input_Info.defaultedInfo.init().name
+            let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
+            let age = Default_Input_Info.defaultedInfo.init().name
+            let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
+            let extra = Default_Input_Info.defaultedInfo.init().extra
+            let animal = Default_Input_Info.defaultedInfo.init().animal
         }
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        let name = Default_Input_Info.defaultedInfo.init().name
-        let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
-        let age = Default_Input_Info.defaultedInfo.init().name
-        let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
-        let extra = Default_Input_Info.defaultedInfo.init().extra
-        let animal = Default_Input_Info.defaultedInfo.init().animal        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! ViewController
     }
 }
-                                                    
-
-
