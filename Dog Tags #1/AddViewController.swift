@@ -18,6 +18,10 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     var defaults = UserDefaults.standard
     var item = String()
+    var createdOne = 0
+    var createdTwo = 1
+    var createdThree = 2
+    var createdFour = 3    
     var createdItems = [0, 1, 2, 3]
     override func viewDidLoad()
     {
