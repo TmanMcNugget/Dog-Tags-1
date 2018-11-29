@@ -1,27 +1,29 @@
 //
 //  AddViewController.swift
 //  Dog Tags #1
-//
 //  Created by period2 on 11/1/18.
 //  Copyright © 2018 period2. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var pet = [[String: String]]()
-    {
-        didSet{
-            defaults.set(pet, forKey: item)
-        }
-    }
+//    {
+//        didSet{
+//            defaults.set(pet, forKey: item)
+//        }
+//    }
     @IBOutlet weak var tableView: UITableView!
     var defaults = UserDefaults.standard
     var item = String()
+    {
+        didSet{
+            print(item)
+        }
+    }
     var createdOne = 0
     var createdTwo = 1
     var createdThree = 2
-    var createdFour = 3    
+    var createdFour = 3
     var createdItems = [0, 1, 2, 3]
     override func viewDidLoad()
     {
@@ -29,14 +31,18 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return item.count
+        return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let indexPath = pet[indexPath.row]
-        cell.textLabel?.text = indexPath["id"]
-        cell.detailTextLabel?.text = indexPath["description"]
+//        let indexPath = pet[indexPath.row]
+//        cell.textLabel?.text = indexPath["id"]
+//        cell.detailTextLabel?.text = indexPath["description"]
+        print(item)
+        cell.textLabel?.text = item
+        self.tableView.reloadData()
+
         return cell
     }
     @IBAction func addItem(_ sender: UIBarButtonItem)
@@ -52,14 +58,15 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
             let choiceTextField = alert.textFields![0] as UITextField
             let allItem = choiceTextField.text!
-            self.item.append(allItem)
+            print(allItem)
+            self.item = allItem
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: false, completion: nil)
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
