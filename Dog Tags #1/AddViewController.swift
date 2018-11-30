@@ -36,9 +36,9 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        let indexPath = pet[indexPath.row]
-//        cell.textLabel?.text = indexPath["id"]
-//        cell.detailTextLabel?.text = indexPath["description"]
+        let indexPath = pet[indexPath.row]
+        cell.textLabel?.text = indexPath["id"]
+        cell.detailTextLabel?.text = indexPath["description"]
         print(item)
         cell.textLabel?.text = item
         self.tableView.reloadData()
