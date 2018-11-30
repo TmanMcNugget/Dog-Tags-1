@@ -8,7 +8,8 @@ import AVFoundation
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var pet = [[String: String]]()
     {
-        didSet{
+        didSet
+        {
             defaults.set(pet, forKey: item)
         }
     }
@@ -31,7 +32,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        return item.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -42,7 +43,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         print(item)
         cell.textLabel?.text = item
         self.tableView.reloadData()
-
         return cell
     }
     @IBAction func addItem(_ sender: UIBarButtonItem)
@@ -58,8 +58,9 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
             let choiceTextField = alert.textFields![0] as UITextField
             let allItem = choiceTextField.text!
-            print(allItem)
             self.item = allItem
+            print(allItem)
+            self.cell.append(allItem)
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
