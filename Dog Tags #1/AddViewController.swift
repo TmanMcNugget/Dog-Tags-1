@@ -88,7 +88,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 //            pet = saveData
 //        }
 //    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         for i in 0...3
@@ -105,4 +104,3 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let nvc = segue.destination as! ViewController
     }
 }
-
