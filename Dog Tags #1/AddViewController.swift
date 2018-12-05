@@ -38,8 +38,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let indexPath = pet[indexPath.row]
-        cell.textLabel?.text = indexPath["id"]
-        cell.detailTextLabel?.text = indexPath["description"]
+        cell.textLabel?.text = indexPath["Name"]
+        cell.detailTextLabel?.text = indexPath["Pet"]
         print(item)
         cell.textLabel?.text = item
         self.tableView.reloadData()
@@ -53,14 +53,18 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     {
         let alert = UIAlertController(title: "Add Item", message: "Do you want to add something?", preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (textField) in
-            textField.placeholder = "New Item"
+            textField.placeholder = "Name"
+        alert.addTextField(configurationHandler: { (textField) in
+                textField.placeholder = "Pet"
+
         })
         let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
             let choiceTextField = alert.textFields![0] as UITextField
-            let allItem = choiceTextField.text!
+            let petTextField = alert.textFields![0] as UITextField
+            let allItem = choiceTextField.text! + petTextField.text!
             self.item = allItem
             print(allItem)
-            self.cell.append(allItem)
+            self.item.append(allItem)
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
@@ -99,4 +103,5 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! ViewController
     }
+}
 }
