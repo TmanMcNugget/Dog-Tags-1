@@ -4,7 +4,6 @@
 //  Created by period2 on 11/1/18.
 //  Copyright © 2018 period2. All rights reserved.
 import UIKit
-import AVFoundation
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var pet = [[String: String]]()
     {
@@ -83,6 +82,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 //            pet = saveData
 //        }
 //    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         for i in 0...3
