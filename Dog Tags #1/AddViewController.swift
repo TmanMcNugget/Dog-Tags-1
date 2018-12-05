@@ -53,13 +53,14 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let alert = UIAlertController(title: "Add Item", message: "Do you want to add something?", preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (textField) in
             textField.placeholder = "Name"
+        })
         alert.addTextField(configurationHandler: { (textField) in
                 textField.placeholder = "Pet"
 
         })
         let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
             let choiceTextField = alert.textFields![0] as UITextField
-            let petTextField = alert.textFields![0] as UITextField
+            let petTextField = alert.textFields![1] as UITextField
             let allItem = choiceTextField.text! + petTextField.text!
             self.item = allItem
             print(allItem)
@@ -72,15 +73,15 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.present(alert, animated: false, completion: nil)
 //        self.tableView.reloadData()
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == .delete
+    func tableView( _ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
         {
-            self.pet.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.reloadData()
+            if editingStyle == .delete
+            {
+                self.pet.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadData()
+            }
         }
-    }
 //    override func viewWillAppear(_ animated: Bool) {
 //        if let saveData = defaults.object(forKey: item) as? []
 //        {
@@ -104,4 +105,4 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let nvc = segue.destination as! ViewController
     }
 }
-}
+
