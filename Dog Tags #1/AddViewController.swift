@@ -5,7 +5,10 @@
 //  Copyright © 2018 period2. All rights reserved.
 import UIKit
 import AVFoundation
+import MapKit
+import SafariServices
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let geoCoder = CLGeocoder()
     var pet = [[String: String]]()
     {
         didSet
@@ -16,11 +19,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var tableView: UITableView!
     var defaults = UserDefaults.standard
     var item = String()
-    {
-        didSet{
-            print(item)
-        }
-    }
     var createdOne = 0
     var createdTwo = 1
     var createdThree = 2
@@ -45,10 +43,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         self.tableView.reloadData()
         return cell
     }
-    @IBAction func addItem(_ sender: UIBarButtonItem)
-    {
-        alert()
-    }
     func alert()
     {
         let alert = UIAlertController(title: "Add Item", message: "Do you want to add something?", preferredStyle: .alert)
@@ -57,13 +51,11 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         })
         alert.addTextField(configurationHandler: { (textField) in
                 textField.placeholder = "Pet"
-
         })
         let okAction = UIAlertAction(title: "Ok Add", style: .default) { (action) in
             let choiceTextField = alert.textFields![0] as UITextField
             let petTextField = alert.textFields![1] as UITextField
             let allItem = choiceTextField.text! + petTextField.text!
-            self.item = allItem
             print(allItem)
             self.item.append(allItem)
             self.tableView.reloadData()
@@ -73,6 +65,10 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         alert.addAction(cancelAction)
         self.present(alert, animated: false, completion: nil)
         self.tableView.reloadData()
+    }
+    @IBAction func addItem(_ sender: UIBarButtonItem)
+    {
+        alert()
     }
     func tableView( _ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
         {
