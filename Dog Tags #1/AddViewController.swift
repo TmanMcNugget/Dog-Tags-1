@@ -72,7 +72,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         alert.addAction(okAction)
         alert.addAction(cancelAction)
         self.present(alert, animated: false, completion: nil)
-//        self.tableView.reloadData()
+        self.tableView.reloadData()
     }
     func tableView( _ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
         {
