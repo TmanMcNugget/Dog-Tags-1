@@ -27,20 +27,23 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        pet.append(["Name": "geoff", "Pet": "dog"])
+        //tableView.reloadData()
+        print(pet)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return item.count
+        return pet.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let indexPath = pet[indexPath.row]
-        cell.textLabel?.text = indexPath["Name"]
-        cell.detailTextLabel?.text = indexPath["Pet"]
+        let IndexPath = pet[indexPath.row]
+        cell.textLabel?.text = IndexPath["Name"]
+        cell.detailTextLabel?.text = IndexPath["Pet"]
         print(item)
-        cell.textLabel?.text = item
-        self.tableView.reloadData()
+        //cell.textLabel?.text = item
+        //self.tableView.reloadData()
         return cell
     }
     func alert()
@@ -57,7 +60,9 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let petTextField = alert.textFields![1] as UITextField
             let allItem = choiceTextField.text! + petTextField.text!
             print(allItem)
-            self.item.append(allItem)
+            //self.item.append(allItem)
+            print(self.pet)
+            self.pet.append(["Name": "\(choiceTextField.text!)", "Pet": "\(petTextField.text!)"])
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "No Cancel", style: .cancel, handler: nil)
@@ -85,18 +90,18 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 //            pet = saveData
 //        }
 //    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        for i in 0...3
-        {
-            let name = Default_Input_Info.defaultedInfo.init().name
-            let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
-            let age = Default_Input_Info.defaultedInfo.init().name
-            let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
-            let extra = Default_Input_Info.defaultedInfo.init().extra
-            let animal = Default_Input_Info.defaultedInfo.init().animal
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+//    {
+//        for i in 0...3
+//        {
+//            let name = Default_Input_Info.defaultedInfo.init().name
+//            let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
+//            let age = Default_Input_Info.defaultedInfo.init().name
+//            let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
+//            let extra = Default_Input_Info.defaultedInfo.init().extra
+//            let animal = Default_Input_Info.defaultedInfo.init().animal
+//        }
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! ViewController
     }
