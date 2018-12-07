@@ -24,7 +24,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     var createdThree = 2
     var createdFour = 3
     var createdItems = [0, 1, 2, 3]
-    var stuuupad = "stuuupad"
     override func viewDidLoad()
     {
         super.viewDidLoad()
