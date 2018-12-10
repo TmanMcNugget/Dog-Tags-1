@@ -90,18 +90,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 //            pet = saveData
 //        }
 //    }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-//    {
-//        for i in 0...3
-//        {
-//            let name = Default_Input_Info.defaultedInfo.init().name
-//            let breedOrTypeOfAnimal = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
-//            let age = Default_Input_Info.defaultedInfo.init().name
-//            let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
-//            let extra = Default_Input_Info.defaultedInfo.init().extra
-//            let animal = Default_Input_Info.defaultedInfo.init().animal
-//        }
-//    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         for i in 0...3
