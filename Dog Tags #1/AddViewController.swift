@@ -28,7 +28,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     {
         super.viewDidLoad()
         pet.append(["Name": "geoff", "Pet": "dog"])
-        //tableView.reloadData()
+        tableView.reloadData()
         print(pet)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -42,8 +42,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         cell.textLabel?.text = IndexPath["Name"]
         cell.detailTextLabel?.text = IndexPath["Pet"]
         print(item)
-        //cell.textLabel?.text = item
-        //self.tableView.reloadData()
+        cell.textLabel?.text = item
+        self.tableView.reloadData()
         return cell
     }
     func alert()
@@ -60,7 +60,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let petTextField = alert.textFields![1] as UITextField
             let allItem = choiceTextField.text! + petTextField.text!
             print(allItem)
-            //self.item.append(allItem)
+//            self.item.append(allItem)
             print(self.pet)
             self.pet.append(["Name": "\(choiceTextField.text!)", "Pet": "\(petTextField.text!)"])
             self.tableView.reloadData()
