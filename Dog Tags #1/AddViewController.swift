@@ -7,6 +7,7 @@ import UIKit
 import AVFoundation
 import MapKit
 import SafariServices
+import CoreLocation
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let geoCoder = CLGeocoder()
     var pet = [[String: String]]()
@@ -100,7 +101,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
             let extra = Default_Input_Info.defaultedInfo.init().extra
             let animal = Default_Input_Info.defaultedInfo.init().animal
-            createdOne: Double = 
+            createdOne = CLLocation(coder: CLLocation.init(latitude: 42.0795, longitude: -87.9511))
             createdTwo: Double =
             createdThree: Double =
             createdFour: Double =
