@@ -100,6 +100,10 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let type = Default_Input_Info.defaultedInfo.init().breedOrTypeOfAnimal
             let extra = Default_Input_Info.defaultedInfo.init().extra
             let animal = Default_Input_Info.defaultedInfo.init().animal
+            createdOne: Double = 
+            createdTwo: Double =
+            createdThree: Double =
+            createdFour: Double =
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
