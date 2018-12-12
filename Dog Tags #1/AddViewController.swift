@@ -102,10 +102,13 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             let extra = Default_Input_Info.defaultedInfo.init().extra
             let animal = Default_Input_Info.defaultedInfo.init().animal
 //            createdOne = Double (CLLocation(coder: CLLocation.init(latitude: 42.0795, longitude: -87.9511)));
-            createdOne = (CLLocation(latitude: 42.0795, longitude: -87.9511))
+        createdOne = CLLocation(latitude: 42.0795, longitude: -87.9511)
 //            createdTwo = Double (CLLocation(coder: CLLocation.init(latitude: 42.0783, longitude: -87.9515)));
+        createdTwo = CLLocation(latitude: 42.0783, longitude: -87.9515)
 //            createdThree = Double (CLLocation(coder: CLLocation.init(latitude: 42.0787, longitude: -87.9523)));
+        createdThree = CLLocation(latitude: 42.0787, longitude: -87.9523)
 //            createdFour = Double (CLLocation(coder: CLLocation.init(latitude: 42.0779, longitude: -87.9527)));
+        createdFour = CLLocation(latitude: 42.0779, longitude: -87.9527)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
